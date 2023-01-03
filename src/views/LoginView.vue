@@ -11,11 +11,16 @@ const password = ref("");
         <v-card-title primary-title class="text-center"> Login </v-card-title>
         <v-card-text>
           <v-form>
-            <v-text-field label="Login Name" v-model="loginName"></v-text-field>
+            <v-text-field
+              label="Login Name"
+              v-model="loginName"
+              :rules="[(v) => !!v || 'Login Name is required']"
+            ></v-text-field>
             <v-text-field
               label="Password"
               type="password"
               v-model="password"
+              :rules="[]"
             ></v-text-field>
           </v-form>
           <pre>
