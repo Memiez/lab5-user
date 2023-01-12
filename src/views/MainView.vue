@@ -8,17 +8,16 @@ import {
   mdiAccountMultiple,
   mdiStar,
 } from "@mdi/js";
+import { useLoginStore } from "@/stores/login";
+const loginStore = useLoginStore();
 
-const emit = defineEmits<{
-  (e: "logout"): void;
-}>();
 const theme = ref("light");
 
 function onClick() {
   theme.value = theme.value === "light" ? "dark" : "light";
 }
 const logout = () => {
-  emit("logout");
+  loginStore.logout();
 };
 </script>
 
@@ -39,8 +38,8 @@ const logout = () => {
       <v-list>
         <v-list-item
           prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
-          title="Sandra Adams"
-          subtitle="sandra_a88@gmailcom"
+          :title="loginStore.loginName"
+          subtitle="sandra_a88@gmail.com"
         ></v-list-item>
       </v-list>
 
