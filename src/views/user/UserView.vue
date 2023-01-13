@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import UserDialog from './UserDialog.vue';
+import UserList from './UserList.vue';
+
+</script>
 
 <template>
-  <div></div>
+  <UserList></UserList>
+  <UserDialog></UserDialog>
 </template>
 
 <style scoped></style>

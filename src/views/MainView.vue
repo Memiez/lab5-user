@@ -4,9 +4,9 @@ import { RouterView } from "vue-router";
 import {
   mdiWeatherSunny,
   mdiWeatherNight,
-  mdiFolder,
   mdiAccountMultiple,
   mdiStar,
+  mdiAccount,
 } from "@mdi/js";
 import { useLoginStore } from "@/stores/login";
 const loginStore = useLoginStore();
@@ -37,7 +37,7 @@ const logout = () => {
     <v-navigation-drawer expand-on-hover rail permanent>
       <v-list>
         <v-list-item
-          prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
+          prepend-avatar="https://i.pinimg.com/originals/35/ce/9f/35ce9f85da291b4c1c504d8cbd37e8ee.gif"
           :title="loginStore.loginName"
           subtitle="sandra_a88@gmail.com"
         ></v-list-item>
@@ -47,9 +47,10 @@ const logout = () => {
 
       <v-list density="compact" nav>
         <v-list-item
-          :prepend-icon="mdiFolder"
-          title="My Files"
-          value="myfiles"
+          :prepend-icon="mdiAccount"
+          title="Users"
+          value="users"
+          to="/user"
         ></v-list-item>
         <v-list-item
           :prepend-icon="mdiAccountMultiple"

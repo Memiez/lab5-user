@@ -1,7 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useUserStore } from "@/stores/user";
+const userStore = useUserStore();
+</script>
 
 <template>
-  <div></div>
+  <div class="text-h2"></div>
 </template>
 
 <style scoped></style>
