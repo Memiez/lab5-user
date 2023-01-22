@@ -12,7 +12,6 @@ const addNewUser = () => {
 };
 const editUser = (user: User) => {
   userStore.editUser(user);
-  
 };
 </script>
 
